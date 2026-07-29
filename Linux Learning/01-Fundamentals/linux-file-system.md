@@ -20,7 +20,6 @@ Linux organizes them all in a hierarchy called a tree structure.
 
 For example:
 
-```text
 /
 ├── home
 │   └── curtis
@@ -58,5 +57,4 @@ This would be running data stored by programs such as:
 
 These can be accessed by entering the `/var/run` directory.
 
-```text id="q9r1jm"
-/var/run
+`/var/run`
