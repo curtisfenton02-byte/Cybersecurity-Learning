@@ -210,7 +210,7 @@ Despite the name, it does not mean user home folders.
 
 Common `/usr` directories include:
 
-| Heading 1 | Heading 2 |
+|Directory | Purpose |
 |-----------|-----------|
 |`/usr/bin`| contains installed programs like git and python3|
 |`/usr/share`|contains shared files like documents and shared resources|
