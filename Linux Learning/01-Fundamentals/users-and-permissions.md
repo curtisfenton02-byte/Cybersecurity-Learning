@@ -28,7 +28,7 @@ Every file and process is associated with a user and Linux tracks who owns these
 
 ## Owning a File
 
-You can see who owns a file in Linux using the `ls -1` command. The displayed output will consist of the:
+You can see who owns a file in Linux using the `ls -l` command. The displayed output will consist of the:
 
 1. file permissions
 2. owner
@@ -92,5 +92,81 @@ Understanding numeric permissions is important because:
 - many linux commands use numeric values (e.g. chmod 755 file)
 - they allow for quick identification of security risks
 - knowing what the value means, allows professionals to control who can access sensitive files
+
+So far I have used terminology such as 'Owner', 'Group' and 'Others' when referring to file permissions. I will now break down what each of these terms means on a fundamental level.
+
+## File Ownership
+
+When I say that a file has an owner, I do not mean ownership in the same way that someone would own a physical object. Instead, I am referring to how Linux records which user account created or currently owns a file.
+
+Every file has a theoretical **label** which describes the: **owner** and **groups**. Whenever someone tries to open, modify or delete that file, Linux first checks this **label** and considers these five things first:
+
+1. Who is trying to access the file?
+2. Who owns the file?
+3. Is the person who is trying to access the file the owner?
+4. If this person is not the owner, are they in the file's group?
+5. If this person is not an owner, or in the file's permission, what permissions do **Others** have for this file?
+
+Once Linux has considered these questions, will it then decide whether access is allowed. Therefore, every file mus store:
+
+- an owner
+- a group
+- permissions
+
+In order to maintain file security.
+
+## Processes
+
+A process is a program which is currently running on the machine. For example:
+
+- Network Manager
+- Bluetooth Service
+- Desktop Environment
+- Print Service
+- SSH Server
+
+Similar to files, all processes also have an **owner**. The owner of the process depends on who opened it. For example, if a user on the machine, opened the Firefox program, then they would be the owner of the Firefox process and this process will inherit the owner's permissions.
+
+### Cybersecurity Relevance
+
+The benefit to only allowing these processes the permissions of the person that opened them, is that if the process becomes compromised, it prevents that application from gaining unrestricted access to the system.
+
+Let's take the Firefox example and look at what would happen if a malicious website managed to exploit Firefox. In this case, since Firefox is running as one of the accounts on the machine, the attacker could potentially, access that account's files, but they couldn't automatically modify critical operating system files because Firefox is not running as **root**.
+
+This is why Linux runs many services under separate accounts to limit the damage to that account rather than the entire operating system.
+
+## User Identity
+
+When a user logs into Linux, they refer to themselves by their username. However, Linux doesn't identify users by their username and instead recognizes your User ID which is a unique identification number (UID) it has created for you.
+
+This User ID is more important to Linux than a user's username and as a result, users can often times rename their account to a different name whilst their UID remains the same.
+
+Linux will still know that all the files made by the previous username, belong to the new username with the same UID because ownership is linked to the UID rather than the displayed username.
+
+Users can display their current UID using:
+
+```bash
+id
+```
+An example output could display:
+
+`uid=1000(user) gid=1000(group) groups=1000(others),27(sudo)`
+
+Above:
+
+- `uid` is the user's UID.
+- `gid` is the primary group ID.
+- `groups` lists every group that the user belongs to.
+
+## Why do Groups Exist?
+
+Groups are collections of users who require the same permissions. Instead of assigning permission to every user individually, Linux assigns permissions to a group, making it much easier to manage access to files, directories, and system resources. This approach is scalable, easier to maintain, and forms the basis of permission management on most Linux systems.
+
+Imagine everyone in an IT department needed access to `/company/scripts`, without groups, Linux would need to give permission to every employee individually. This would become tiresome and hard to manage, so instead users can be put into a group called 'developers', where everyone in that group automatically receives those permissions.
+
+If a new developer joins the company, Linux doesn't need to change the folder permissions. Instead, the administrator can simply add the new employee to the 'developers' group.
+
+Some groups, such as `sudo`, are created automatically by Linux and allow its members to temporarily perform administrative tasks.
+
 
 
