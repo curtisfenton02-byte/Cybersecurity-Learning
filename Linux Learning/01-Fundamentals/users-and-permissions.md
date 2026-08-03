@@ -83,7 +83,7 @@ By adding every group of three permission values together, we can figure out wha
 | Group | r-x          | 4 + 1          |  5       |
 | Others| r-x         |  4 + 1         |    5       |
 
-As a result, **rwxr-xr-x** would equal the numeric value of **755**and it would read as: **the owner can do everything, others can read and execute**
+As a result, **rwxr-xr-x** would equal the numeric value of **755** and it would read as: **the owner can do everything, others can read and execute**
 
 ### Why does a files' numerical value matter?
 
