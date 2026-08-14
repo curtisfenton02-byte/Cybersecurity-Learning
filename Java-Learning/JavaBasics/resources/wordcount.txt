@@ -1,0 +1,1 @@
+It is important that the file matches what the program expects. Otherwise, an exception can be thrown. Exemptions are runtime errors like dividing by zero, reading a missing file and/or reading text when a number is expected.

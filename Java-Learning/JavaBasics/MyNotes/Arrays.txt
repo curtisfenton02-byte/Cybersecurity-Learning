@@ -1,0 +1,18 @@
+ArrayList methods to memorize: 
+| Method             | What it does            | Example                   |
+| ------------------ | ----------------------- | ------------------------- |
+| `add()`            | Add a new item          | `names.add("Fred");`      |
+| `add(index, item)` | Insert at a position    | `names.add(1, "Sue");`    |
+| `set()`            | Replace an item         | `names.set(1, "Sarah");`  |
+| `get()`            | Retrieve an item        | `names.get(0);`           |
+| `contains()`       | Check if an item exists | `names.contains("Fred");` |
+| `remove(value)`    | Remove by value         | `names.remove("Fred");`   |
+| `remove(index)`    | Remove by position      | `names.remove(2);`        |
+| `size()`           | Number of items         | `names.size();`           |
+| `isEmpty()`        | Is the list empty?      | `names.isEmpty();`        |
+Arrays - Sort an integer array numerically, but only sort from index 1 to 4: using Arrays.sort(intArray, 1, 4); 
+Now it will only sort integers from 1-4, the others will remain in the same order.
+ArrayList has to use long form variables. For example 'Integer' instead of 'int'. 
+There are 5 numbers but because index starts at 0, number 30 is in element 4. Therefore size = 5 - (1) = 4 which in this case is 30.
+An ArrayList can be used to save data from a file and then perform calculations with such data, rather than reading
+the data once and then it being deleted (as is what happens in a typical file reading program)

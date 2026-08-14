@@ -1,0 +1,4 @@
+John scored 20
+Alice scored 35
+Bob scored 18
+Emma scored 42

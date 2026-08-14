@@ -1,0 +1,17 @@
+package Variables;
+
+public class NumbersTask3 {
+    public static void main(String[] args) {
+        int num1, num2, num3, average;
+        
+        num1 = 125;
+        num2 = 28;
+        num3 = -25;
+        average = (num1 + num2 + num3) / 3;
+        
+        System.out.println("Num1 is: " + num1);
+        System.out.println("Num2 is: " + num2);
+        System.out.println("Num3 is: " + num3);
+        System.out.println("The average is: " + average);
+    }
+}
