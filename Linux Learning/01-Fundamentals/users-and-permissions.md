@@ -168,5 +168,36 @@ If a new developer joins the company, Linux doesn't need to change the folder pe
 
 Some groups, such as `sudo`, are created automatically by Linux and allow its members to temporarily perform administrative tasks.
 
+### The key idea behind why Linux needs to have users and permissions
 
+Linux needs to know:
 
+- who everybody on its system is
+- what files they're trying to access
+- what permissions those files give a user
+
+Similarly, when a program is involved, Linux needs to know:
+
+- which user is running this program
+
+### Overall Concept Diagram
+
+USER
+  |
+  v
+has a UID
+  |
+  v
+belongs to GROUPS
+  |
+  v
+runs PROCESSES
+  |
+  v
+processes access FILES
+  |
+  v
+files have an OWNER + GROUP
+  |
+  v
+permissions determine what can be done
