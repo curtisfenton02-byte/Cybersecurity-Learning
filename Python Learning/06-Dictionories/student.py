@@ -4,9 +4,12 @@ student = {
     "age": 23,
     "course": "Cyber Security"
 }
-student["age"] = 24 # changes age to 24
 
-student["email"] = "student1@gmail.com" # adds a new key and value
+# changes age to 24
+student["age"] = 24 
+
+# adds a new key and value
+student["email"] = "student1@gmail.com" 
 
 print(student["age"]) # prints age from student
 
