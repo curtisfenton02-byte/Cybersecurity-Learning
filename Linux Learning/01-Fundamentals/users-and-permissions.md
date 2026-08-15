@@ -77,7 +77,7 @@ Each permission has a numeric value:
 
 By adding every group of three permission values together, we can figure out what permissions owner/group/others have for a file.
 
-| Group | Permissions | Calculation  | Value |
+| Classes | Permissions | Calculation  | Value |
 |-----------|-----------|-----------|-----------|
 | Owner | rwx          | 4 + 2 + 1         |  7         |
 | Group | r-x          | 4 + 1          |  5       |
@@ -97,9 +97,11 @@ So far I have used terminology such as 'Owner', 'Group' and 'Others' when referr
 
 ## File Ownership
 
-When I say that a file has an owner, I do not mean ownership in the same way that someone would own a physical object. Instead, I am referring to how Linux records which user account created or currently owns a file.
+When I say that a file has an owner, I do not mean ownership in the same way that someone would own a physical object. Instead, I am referring to how Linux records which user account created and/or currently owns a file.
 
-Every file has a theoretical **label** which describes the: **owner** and **groups**. Whenever someone tries to open, modify or delete that file, Linux first checks this **label** and considers these five things first:
+Every file has a theoretical **label** which describes the: **owner**, **groups** and **others**. These three terms are known in Linux as the three classes of user categories (or classes of users) used to define permissions. 
+
+Whenever someone tries to open, modify or delete that file, Linux first checks this **label** and considers these five things first:
 
 1. Who is trying to access the file?
 2. Who owns the file?
@@ -107,13 +109,168 @@ Every file has a theoretical **label** which describes the: **owner** and **grou
 4. If this person is not the owner, are they in the file's group?
 5. If this person is not an owner, or in the file's permission, what permissions do **Others** have for this file?
 
-Once Linux has considered these questions, will it then decide whether access is allowed. Therefore, every file mus store:
+Once Linux has considered these questions, will it then decide whether access is allowed. This is why every file must store:
 
 - an owner
 - a group
 - permissions
 
 In order to maintain file security.
+
+## Changing File Permissions with chmod
+
+I am now going to delve into why a file's owners, groups and others have such permissions as read, write and execute. Plus I will discuss the use of `chmod`, when changing these permissions.
+
+### What Is chmod?
+
+`chmod` stands for **change mode** and a mode represents the permissions associated with a file or directory. For example:
+
+- -rw-r--r-- 1 | user1 user2 notes.txt
+
+The permissions are -rw-r--r--, meaning that:
+
+| Permission | User classes |
+|----------|--------|
+| rw-         | Owner       |
+| r--         | Group       |
+| r--         | Others       |
+
+Currently with these permissions, the owner cannot execute the file. However, we can change that by using the `chmod` command.
+
+### The Three Permission Categories
+
+The three user classes (owner, group and others) are commonly represented by letters:
+
+| Class | Letter |
+|-----------|-----------|
+|  user (owner)         |  u         |
+|  group         |  g         |
+|  others         |  o         |
+| all | a |
+
+- u: means the owner of the file.
+- g: means users belonging to the file's group.
+- o: means everyone else.
+- a: means the owner + group + others.
+
+These letters allow us to tell chmod whose permissions we want to change.
+
+## Adding and Removing Permissions
+
+`chmod` can be used to:
+
+1. + add a permission
+2. - remove a permission
+3. = set permissions
+
+### Example command:
+
+```bash
+chmod u+x script.sh
+```
+### Breakdown
+
+| Section | Action |
+|-------|-------------|
+| chmod      | changes permissions            |
+| u      | refers to the owner class           |
+| +      | adds a permission            |
+| x | refers to execute permission |
+
+In full:
+
+`chmod u+x script.sh` adds an execute permission for the owner of script.sh.
+
+Now the previous permissions for the script.sh file has changed to:
+
+```bash
+ -rwr--r-- script.sh
+```
+As a result, the owner can now execute the file as well as read and write it. However, the other classes remain unchanged.
+
+## Changing Group Permissions
+
+Similar to adding permissions to the owner class, we can also add permissions, such as write, to the **group** class as well.
+
+```bash
+chmod g+w notes.txt
+```
+Now the file permissions will look something like:
+
+- -rw-rw-r--
+
+## Changing Other's Permissions
+
+```bash
+chmod o-r notes.txt
+```
+This command removes read permissions from others.
+
+## Multiple Changes
+
+We can make multiple permission changes in a single command by using a comma to separate the two. For example:
+
+```bash
+chmod u+x,g+w script.sh
+```
+Now:
+
+- Owner can execute file.
+- Group can write within the file.
+
+## Numeric chmod
+
+We have already established that permissions can also be represented numerically:
+
+- r = 4
+- w = 2
+- x = 1
+
+Therefore, the more popular way to change permissions is with numerics. For example:
+
+### Written chmod
+
+`chmod u+rwx,g+rx,o+rx file`
+
+### Numeric chmod
+
+`chmod 755 file`
+
+The three numbers represent:
+
+| Owner | Group | Others |
+|---------|-------|----------|
+|  7       | 5      |   5       |
+
+Now if we calculate:
+
+- 4 + 2 + 1 (rwx) = 7
+- 4 + 1 (r-x) = 5 
+- 4 + 1 (r-x) = 5
+
+Final file permission layout for 755:
+
+- `-rwx-r-x-r-x`
+
+## chmod does not change a files Owner or Group
+
+Whilst chmod does change a file's permissions, it does not change that files owner or group. To change who owns a file, we would use `chown`. 
+
+## Permissions on Directories
+
+The permission keywords: r, w and x don't mean the same thing when applied to a directory.
+
+### File
+
+- r = read the contents
+- w = modify the contents
+- x = execute the file
+
+### Directory
+
+- r = see/list the directory's contents
+- w = create, delete or rename items inside it
+- x = enter/traverse the directory
 
 ## Processes
 
