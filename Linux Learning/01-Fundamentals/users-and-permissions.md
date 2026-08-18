@@ -159,9 +159,9 @@ These letters allow us to tell chmod whose permissions we want to change.
 
 `chmod` can be used to:
 
-1. + add a permission
-2. - remove a permission
-3. = set permissions
+1. (+)add a permission
+2. (-) remove a permission
+3. (=) set permissions
 
 ### Example command:
 

@@ -8,6 +8,11 @@ students = [
 # so we use a lambda sorted() function
 
 sorted_students = sorted(students, key = 
-                         lambda student: student["age"])
+# because students is a list, the first mention of student
+# in the lambda refers to the whole:
+# {"name": "Alice", "age": 25},
+         lambda student: student["age"])
+# Whilst student[age] refers to the specific numbers,
+# like 25
 
 print(sorted_students)
