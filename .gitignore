@@ -1,3 +1,4 @@
 #Python folders and files to ignore
 __pycache__/
 *.pyc
+.venv/
