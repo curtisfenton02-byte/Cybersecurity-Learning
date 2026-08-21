@@ -358,3 +358,44 @@ files have an OWNER + GROUP
   |
   v
 permissions determine what can be done
+
+# A File's Complete Permission Information
+
+I will now dissect an example file's credentials. First to gain a more in-depth analysis of **script.sh**, I will run:
+
+```bash
+ls -l script.sh
+```
+
+Linux will provide me such diagnostics:
+
+```bash
+-rwxr-x--- 1 alice developers 1200 Aug 21 22:30 script.sh
+```
+### Information Breakdown
+
+-rwxr-x--- 1 alice developers 1200 Aug 21 22:30 script.sh
+│          │   │       │
+│          │   │       └── Group
+│          │   └────────── Owner
+│          └────────────── Permissions
+└───────────────────────── File type + permissions
+
+### More Specifically
+
+-          → regular file
+
+rwx        → owner permissions
+r-x        → group permissions
+---        → others permissions
+
+alice     → owner
+developers → group
+
+## Full Description
+
+I could posit, from this information, that script.sh is a regular file owned by alice, associated with the developers group. The owner can read, write and execute the file. Members of developers can read and execute the file, while everyone else has no permissions.  
+
+## How Linux Decides Whether Someone Can Access The File
+
+When a user accesses a file, Linux determines which permission category applies to them. It first checks whether they are the file's owner. If not, it checks whether they belong to the file's group. If neither is true, Linux treats them as "others." The corresponding permission set is then used to determine whether the requested action is allowed.
