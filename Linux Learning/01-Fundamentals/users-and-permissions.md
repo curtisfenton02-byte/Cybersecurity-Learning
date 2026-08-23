@@ -383,7 +383,7 @@ Linux will provide me such diagnostics:
 
 ### More Specifically
 
--          → regular file
+`-`        → regular file
 
 rwx        → owner permissions
 r-x        → group permissions
