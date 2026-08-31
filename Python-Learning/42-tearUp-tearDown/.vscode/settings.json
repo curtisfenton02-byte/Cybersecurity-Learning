@@ -1,9 +1,8 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:system",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./Python-Learning",
+        ".",
         "-p",
         "test_*.py"
     ],
