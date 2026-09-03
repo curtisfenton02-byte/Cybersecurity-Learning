@@ -287,4 +287,4 @@ Commands such as:
 ps aux
 ```
 
-Are particularly important when investigating a Linux machine as running processes reveal what software and service are active and which users they run under. Examining this information can help us understand the system's attack surface, identify unusual activity and determine which privileges different services posses. 
+Are particularly important when investigating a Linux machine as running processes reveal what software and service are active and which users they run under. Examining this information can help us understand the system's attack surface, identify unusual activity and determine which privileges different services processes. 
