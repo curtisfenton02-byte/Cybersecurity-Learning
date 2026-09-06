@@ -169,5 +169,33 @@ tasklist /?
 ```
 
 This provides a help output for the list. 
-  
 
+```bash
+tasklist | findstr explorer.exe
+```
+
+This is uses two commands to search for the example.exe process within the viewing interface of tasklist.
+
+The `|` takes the output from tasklist and passes it to findstr. Then `findstr explorer` filters the results so that we only see lines containing `explorer.exe`. 
+  
+### Example tasklist view of explorer.exe
+
+**explorer.exe    9800    Console    22    230,272 K**
+
+Interpretation:
+
+|Column|Our Result|Meaning|
+|----|------|----|
+|Image Name|explorer.exe|The executable associated with the process.|
+|PID|1934|9800| The current Process ID. |
+|Session Name|Console|The Windows session the process belongs to.|
+|Session#|22|Identifier for that session.|
+|Memory Usage|230,272 K|Roughly 225 MB of memory is currently associated with the process.|
+
+```bash
+tasklist /FI "IMAGINE eq explorer.exe"
+```
+
+This is similar to findstr but instead of searching for the text output, `/FI` applies a filter to the tasklist command itself.
+
+The syntax `/FI "condition"` only shows processes matching this condition, which in this case is `IMAGENAME eq explorer.exe`. This condition shows any processes whose image name equals `exploere.exe`.
