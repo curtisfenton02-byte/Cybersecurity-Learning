@@ -199,3 +199,18 @@ tasklist /FI "IMAGINE eq explorer.exe"
 This is similar to findstr but instead of searching for the text output, `/FI` applies a filter to the tasklist command itself.
 
 The syntax `/FI "condition"` only shows processes matching this condition, which in this case is `IMAGENAME eq explorer.exe`. This condition shows any processes whose image name equals `exploere.exe`.
+
+### Process Hierarchy
+
+```bash
+wmic process where "name='explorer.exe'" get Name,ProcessId,ParentProcessId
+```
+
+- ProcessId: the PID of the process requested.
+- ParentProcessId: the PID of the process which created/launched the process (explorer.exe).
+
+```bash
+tasklist /FI "PID eq 20135"
+```
+
+Assuming that the ParentProcessId is 20135, by using this command, we can request the process which matches this PID.
