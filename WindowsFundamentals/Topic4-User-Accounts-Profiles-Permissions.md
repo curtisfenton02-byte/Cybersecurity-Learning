@@ -72,13 +72,13 @@ However, we can still list the system's local users and groups by using commands
 
 ### Get local users
 
-```powershell
+```cmd
 net user
 ```
 
 ### Get local groups
 
-```powershell
+```cmd
 net localgroup
 ```
 
