@@ -192,9 +192,36 @@ The standard logs are visible under Windows Logs. Below is a brief description a
 Another Log type is CustomLog which whilst not being one of the standard five Windows logs, is still present in some Windows environments.
 
 | Log | Description |
+|------------|---------------|
 |CustomLog|Contains events logged by applications that create a custom log. Using a custom log enables an application to control the size of the log or attach ACLs for security purposes without affecting other applications.|
 
 ### Shared Folders
+
+Shared Folders show us the folders on our computer which have been made available over the network, so that other computers or users can access them.
+
+Within the Shared Folders tool, there is a subsection called Shares which are resources the computer has made available through the Windows network. For example, suppose we have a C:\Projects folder on our computer, Windows can make this folder available over the network by creating a share called *Projects*. Another computer can then access this folder through `\\OurComputer\Projects`. These shared folders are listed in the Shares folder.
+
+There is also **C$** and **ADMIN$** folders which aren't folders which we personally decided to share but rather created by Windows automatically as **administrative shares**.
+
+### C$
+
+This represents the entire C: drive (C:\). The $ specifically hides the share from normal network browsing. An administrator on another computer could potentially access this folder with \\ComputerName\C$, provided they have the required permissions.
+
+### ADMIN$
+
+This typically refers to the Windows directory (C:\Windows) and exists primarily for *remote administration*.
+
+### Permissions
+
+As with any object within Windows, we can right-click on a folder to view its properties, such as Permissions (who can access the shared resource).
+
+### Sessions
+
+Within the Sessions folder, there will be a list of users who are currently connected to the shares, if any.
+
+### Open Files
+
+Any folders/files that the current connected users access will be listed under **Open Files**.
 
 
 
