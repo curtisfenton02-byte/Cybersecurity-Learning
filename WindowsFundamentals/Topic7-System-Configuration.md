@@ -318,9 +318,57 @@ Within Storage, there is only one other section called **Disk Management**. We c
 
 Plus, we can perform operations such as creating, deleting, formatting, resizing and assigning drive letters to volumes. 
 
-### What is a Partition?
+## Disk Management Actions
 
-A partition is a section of a physical disk which has been separated from the rest of the disk. Suppose we have a 1TB disk, Windows might divide this space into two partitions each consisting of their own size (P1: 600GB, P2: 400GB). Even though the disk is still physically one SSD, Windows now treats the two partitions as separate sections.
+There are several actions we can perform from within the Disk Management interface. These include:
+
+| Action | Description |
+|----------|--------|
+|Create a partition|We can take unallocated space and create a new partition from it.|
+|Shrink a volume|For example, we could potentially shrink C: = 1TB to be C: 700GB. |
+|Extend a volume|Reverse of shrinking a volume, we can C: 700GB into unallocated space (300GB), making it C: 1TB. However, there are restrictions on when Windows can do this, particularly concerning where the unallocated space is located.|
+| Assign or change a drive letter | We could have a volume which Windows currently identifies as D: and decide to change it to E:. Although, changing drive letters can cause problems for software which expects a particular path.|
+| Format a volume | Formatting prepares a volume with a file system. Normally, formatting destroys the existing file-system contents, so it is an important operation.|
+| Delete a volume | We can remove a volume and turn its space into unallocated space. |
+
+## Services and Applications
+
+A service is a special type of application that runs in the background.
+
+Here we can see all the services and their statuses by clicking the **Services** button provided within the Services and Applications interface. Services in this interface are displayed in a list format and contain such information as:
+
+- Service name (this differs from the display name)
+- Description
+- Status
+- Startup Type
+- Log On As
+
+Within this interface, we also have the option to **Start** and **Restart**. Plus by selecting the service's properties option, we can view and manage the:
+
+- Service status
+- Description
+- Path to executable
+- Startup Type
+
+### Startup Type
+
+The four startup type options are presented in a drop-down list. These options are as follows:
+
+| Startup Type | Description |
+|----------|--------|
+|Automatic|The service starts every time during the Windows system boot.|
+|Manual|The service only starts when another process or user triggers it.|
+|Disabled|The service should not run at all.|
+| Automatic (Delayed Start) |Windows starts the service automatically, but waits until after the main boot process has finished before starting. |
+
+### Why delay a service?
+
+Windows has many services that need to run, but not all of them need to start immediately. By allowing Windows to prioritize important services during the initial booting, we are reducing the resource competition and therefore improving the startup responsiveness.
+
+
+
+
+
 
 
 
