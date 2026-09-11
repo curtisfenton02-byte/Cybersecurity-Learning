@@ -223,6 +223,109 @@ Within the Sessions folder, there will be a list of users who are currently conn
 
 Any folders/files that the current connected users access will be listed under **Open Files**.
 
+## Local Users and Groups
+
+This section of Computer Management is also accessible by entering `lusrmgr.msc` into the Windows Run prompt (Wind + R). The Local Users and Groups management console is basically a graphical tool for managing who can log into a Windows computer and what local groups they belong to.
+
+### Local Users
+
+The **Users** folder within this interface allows us to view the local accounts on the computer. We can right-click a user to access things such as:
+
+- Set Password: change the account's password.
+- Properties: view and configure various account settings.
+- Delete: remove the account.
+- Rename: change the account's name.
+- Disable Account: prevent the account from being used without deleting it.
+
+### Local Groups
+
+The **Groups** folder shows us the machine's local groups. A group is essentially a collection of user accounts which have a particular set of permissions or privileges.
+
+## Performance 
+
+Continuing on with another Computer Management section, we have **Performance**. We can access a more comprehensive overview of the Performance interface by searching for Perfmon in the Windows search bar. Alternatively, we can type `perfmon.msc` into the Windows Run prompt.
+
+Withing Performances' subfolder **Monitoring Tools**, we have a utility called **Performance Monitor**. This section allows Windows to graph performance measurements called **counters**. For example, we could monitor:
+
+- % Processor Time
+- Available Memory
+- Disk activity
+- Network traffic
+
+The graph will visually convey how the values change over time rather than a simple snapshot.
+
+It is useful for troubleshooting performance issues on a computer system, whether local or remote.
+
+### Difference between Performance Monitoring and Task Manager
+
+Whilst Task Manager is designed for quickly viewing current system performance, Performance Monitor provides a more detailed monitoring and analysis of the system's performance overtime. 
+
+### Data from a log file
+
+The Performance Monitor can also display data that Windows previously recorded. For example, we could have Windows collects CPU usage for an hour and then store this information as a log file.
+
+This is useful for analyzing past system performance.
+
+## Device Manager
+
+Next we have Device Manager which allows us to view and configure the computer's hardware and software which grants Windows the ability to communicate with this hardware. We can also open it with `devmgmt` in the search bar or `devmgmt.msc` in Run.
+
+Device Manager contains a list of hardware categories such as:
+
+- Audio inputs and outputs
+- Bluetooth
+- Display adapters
+- Keyboards
+- Mice and other pointing devices
+- Network adapters
+- Processors
+- Storage controllers
+- System devices
+
+Within each category will be the specific hardware devices installed within the computer.
+
+### Drivers
+
+An important concept behind Device Manager are drivers. Windows needs software called a device driver to communicate with many pieces of hardware. The driver provides the instructions that Windows needs to interact with the device.
+
+### Interacting with a device
+
+By right-clicking a device, we are provided with multiple options, such as:
+
+| Device Option | Description |
+|----------|--------|
+|Update driver|Look for a newer driver.|
+|Disable device|Tell Windows to stop using the device.|
+|Uninstall device|Remove the device's driver/software configurations from Windows.|
+|Properties | View information about the device, its driver, and any problems Windows has detected.|
+
+### Yellow Warning Symbol
+
+An important feature of Device Manager is the **yellow warning triangle** next to a listed device. This generally means that Windows has detected some type of problem with that device, such as a missing or malfunctioning driver.
+
+We can open Device + Properties + General to view the Devices' status.
+
+## Storage
+
+Within Storage, there is only one other section called **Disk Management**. We can open this directly with `diskmgmt.msc`. This is a system utility used to manage the computer's disks, partitions and volumes. We can view:
+
+- Which physical disks are installed
+- Which partitions exist on those disks
+- Which drive letters are assigned
+- How much space is available
+- Whether a volume is formatted
+- Whether space is allocated or unallocated
+
+Plus, we can perform operations such as creating, deleting, formatting, resizing and assigning drive letters to volumes. 
+
+### What is a Partition?
+
+A partition is a section of a physical disk which has been separated from the rest of the disk. Suppose we have a 1TB disk, Windows might divide this space into two partitions each consisting of their own size (P1: 600GB, P2: 400GB). Even though the disk is still physically one SSD, Windows now treats the two partitions as separate sections.
+
+
+
+
+
 
 
 
