@@ -24,7 +24,7 @@ whoami
 
 ### ipconfig
 
-This commonly used command will show the network address settings for the computer.
+This commonly used command, will show the network address settings for the computer.
 
 ```cmd
 ipconfig
