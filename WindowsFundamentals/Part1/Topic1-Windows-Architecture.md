@@ -112,7 +112,7 @@ As a result, the application requests the operation through Windows' system inte
 
 Take this example task manager information:
 
-|Information||Details|Meaning|
+|Information|Details|Meaning|
 |----|------|----|
 |Process|explorer.exe|this is the Windows Explorer process. It provides a large amount of the graphical Windows shell we interact with (desktop, taskbar, Start menu, File Explorer windows).|
 |PID|13968|this is the Process ID Windows gives to each running process as an identifier.|
