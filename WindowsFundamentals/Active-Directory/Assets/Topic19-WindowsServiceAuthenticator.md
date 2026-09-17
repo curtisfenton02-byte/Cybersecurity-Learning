@@ -1,1 +1,0 @@
-![Kerberos authentication service](Cybersecurity-Learning/WindowsFundamentals/Active-Directory/Kerberos.png)

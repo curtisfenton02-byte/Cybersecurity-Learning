@@ -130,7 +130,7 @@ The TGS contains a copy of the Service Session Key on its encrypted contents so 
 
 Finally, the TGS can then be sent to the desired service to authenticate and establish a connection. The service will use its configured account's password hash to decrypt the TGS and validate the Service Session Key.
 
-**Screenshots of the Kerberos authentication service can be viewed in the WindowsFundamentals-Topic19-ScreenShot file**
+**Screenshots of the Kerberos authentication service can be viewed in the WindowsFundamentals-Active-Directory-Assets folder**
 
 ## NetNTLM Authentication
 
