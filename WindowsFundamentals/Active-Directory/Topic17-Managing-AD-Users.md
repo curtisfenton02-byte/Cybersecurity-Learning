@@ -249,5 +249,5 @@ This tells Active Directory that it requires this user to change their password 
 
 ## Overall Function
 
-So ultimately, by utilizing the two commands, we have reset Sophie's password and then forced her to change it when she next logs in.
+So ultimately, by utilizing the two commands, we have reset Sophie's password and then forced her to change it when she next logs on.
 
