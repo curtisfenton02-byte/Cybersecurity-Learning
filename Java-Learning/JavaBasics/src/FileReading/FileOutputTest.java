@@ -6,9 +6,9 @@ import java.io.PrintWriter;
 public class FileOutputTest {
     public static void main(String[] args) 
     throws FileNotFoundException{
-        Scanner input = new Scanner(new File("JavaBasics/resources/vehicle.txt"));
+        Scanner input = new Scanner(new File("Java-Learning/JavaBasics/resources/vehicle.txt"));
 
-        PrintWriter output = new PrintWriter("JavaBasics/resources/output.txt");
+        PrintWriter output = new PrintWriter("Java-Learning/JavaBasics/resources/output.txt");
         String name = input.nextLine();
         double mpg = input.nextDouble();
         int fuel = input.nextInt();

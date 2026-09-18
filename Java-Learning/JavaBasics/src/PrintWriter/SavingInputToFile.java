@@ -10,7 +10,7 @@ public class SavingInputToFile {
         System.out.print("Enter name: ");
         String name = keyboard.nextLine();
 
-        PrintWriter output = new PrintWriter("JavaBasics/resources/names.txt");
+        PrintWriter output = new PrintWriter("Java-Learning/JavaBasics/resources/names.txt");
         
         output.println(name);
 

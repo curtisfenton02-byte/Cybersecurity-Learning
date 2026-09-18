@@ -4,9 +4,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class test1 {
+public class StudentAttributes {
 public static void main(String[] args) throws FileNotFoundException{
-Scanner file = new Scanner(new FileReader("student.txt"));
+Scanner file = new Scanner(new FileReader("Java-Learning/JavaBasics/resources/student.txt"));
 
 String name = file.nextLine();
 int age = file.nextInt();

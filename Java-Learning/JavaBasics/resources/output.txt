@@ -1,1 +1,3 @@
-Nissan Juke46.550129.9
+Vehicle Nissan Juke
+46.5 50 129.9
+511.4 64.95

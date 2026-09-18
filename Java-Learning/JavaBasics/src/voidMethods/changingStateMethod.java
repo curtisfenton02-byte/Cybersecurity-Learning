@@ -9,7 +9,7 @@ public class changingStateMethod {
     }
     public static void main(String[] args) {
         System.out.println(count);
-        // line 1 prints the intial count = 0 
+        // line 1 prints the initial count = 0 
         
         increaseCount();
         //next line jumps to increaseCount method

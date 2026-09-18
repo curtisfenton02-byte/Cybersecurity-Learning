@@ -1,0 +1,15 @@
+Studio
+12
+99000.00
+
+One-Bedroom
+24
+119000.00
+
+Two-Bedroom
+18
+149000.00
+
+Penthouse
+8
+199000.00

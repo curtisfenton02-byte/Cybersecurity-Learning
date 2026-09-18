@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class InputFileTask1 {
     public static void main(String[] args) throws FileNotFoundException{  
     
-    Scanner input = new Scanner(new File("JavaBasics/resources/vehicle2.txt"));
+    Scanner input = new Scanner(new File("Java-Learning/JavaBasics/resources/vehicle2.txt"));
 
 String model = input.nextLine();
 double mpg = input.nextDouble();

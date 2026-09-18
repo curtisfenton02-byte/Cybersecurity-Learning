@@ -6,9 +6,11 @@ import java.util.Scanner;
 
 public class WagesCalculator {
     public static void main(String[] args) throws FileNotFoundException{
-        Scanner file = new Scanner(new FileReader("JavaBasics/resources/task3.txt"));
+        Scanner file = new Scanner(new FileReader("Java-Learning/JavaBasics/resources/task3.txt"));
         Scanner console = new Scanner(System.in);
-        System.out.println("Wages Calculator: ");
+        System.out.println("\n===== WAGES CALCULATOR =====\n");
+        System.out.println("Enter the bonus rate as a percentage.");
+        System.out.println("For example, enter 10 for 10% bonus.");
         System.out.println("Specify bonus rate: ");
         int bonusRate = console.nextInt();
         double totalWages = 0;
@@ -24,11 +26,13 @@ public class WagesCalculator {
     }
     System.out.printf("%s worked %d hours at a rate of £%.2f per hour and received £%.2f %n", name, hours, hourlyRate, wage);
     totalWages += wage;
-        
-    }
+       
     System.out.println(); //spacing 
 
     System.out.printf("Total wages paid: £%.2f\n", totalWages);
+    }
+    
+    
     file.close();
     console.close();
     }

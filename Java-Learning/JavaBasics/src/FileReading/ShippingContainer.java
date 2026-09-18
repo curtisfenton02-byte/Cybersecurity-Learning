@@ -5,7 +5,7 @@ import java.io.FileReader;
 
 public class ShippingContainer {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new FileReader("JavaBasics/resources/task2.txt"));
+        Scanner file = new Scanner(new FileReader("Java-Learning/JavaBasics/resources/task2.txt"));
 
         int cargoLength = file.nextInt();
         int cargoWidth = file.nextInt();

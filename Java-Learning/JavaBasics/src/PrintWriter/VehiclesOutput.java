@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 public class VehiclesOutput {
     public static void main(String[] args) 
         throws FileNotFoundException{
-        Scanner input = new Scanner(new File("JavaBasics/resources/vehicle.txt"));
+        Scanner input = new Scanner(new File("Java-Learning/JavaBasics/resources/vehicle.txt"));
 
         String name = input.nextLine();
         double mpg = input.nextDouble();
@@ -17,7 +17,7 @@ public class VehiclesOutput {
         double range = mpg * fuelCapacityGallons;
         double costToFill = (fuel * perLitre)/100;
         
-        PrintWriter output = new PrintWriter("JavaBasics/resources/output.txt");
+        PrintWriter output = new PrintWriter("Java-Learning/JavaBasics/resources/output.txt");
         output.printf("Vehicle %s%n", name);
         output.printf("%.1f %d %.1f%n", mpg, fuel, perLitre);
         output.printf("%.1f %.2f%n", range, costToFill);

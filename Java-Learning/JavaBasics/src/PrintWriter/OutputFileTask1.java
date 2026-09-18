@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class OutputFileTask1 {
     public static void main(String[] args) 
     throws FileNotFoundException{
-        Scanner input = new Scanner(new File("JavaBasics/resources/vehicle2.txt"));
+        Scanner input = new Scanner(new File("Java-Learning/JavaBasics/resources/vehicle2.txt"));
 
 String model = input.nextLine();
 double mpg = input.nextDouble();
@@ -19,9 +19,10 @@ double gallons = tank / 4.54609;
 double range = mpg * gallons;
 double costToFill = (tank * price) / 100;
 
-PrintWriter writer = new PrintWriter("JavaBasics/resources/vehicle3.txt");
+PrintWriter writer = new PrintWriter("Java-Learning/JavaBasics/resources/vehicle3.txt");
 
 writer.println(model);
+writer.println(costToFill);
 writer.println(mpg + " " + tank + " " + price);
 writer.println(range + " " + gallons);
 

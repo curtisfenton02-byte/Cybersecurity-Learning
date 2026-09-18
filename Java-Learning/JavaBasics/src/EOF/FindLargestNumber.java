@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class FindLargestNumber {
     public static void main(String[] args) throws FileNotFoundException{
-        Scanner file = new Scanner(new FileReader("JavaBasics/resources/SimpleNumbers.txt"));
+        Scanner file = new Scanner(new FileReader("Java-Learning/JavaBasics/resources/SimpleNumbers.txt"));
     int max = 0;
     while (file.hasNextInt()){
         int number = file.nextInt();

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ReadingEmployeeData {
     public static void main(String[] args)
     throws FileNotFoundException {
-        Scanner input = new Scanner(new File("JavaBasics/resources/employees.txt"));
+        Scanner input = new Scanner(new File("Java-Learning/JavaBasics/resources/employees.txt"));
 
         while (input.hasNext()){
             String name = input.next();

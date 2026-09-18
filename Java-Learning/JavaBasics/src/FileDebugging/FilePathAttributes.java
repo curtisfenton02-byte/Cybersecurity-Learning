@@ -3,7 +3,7 @@ package FileDebugging;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class Test1 {
+public class FilePathAttributes {
     public static void main(String[] args) throws FileNotFoundException{
         File file = new File("resources/javaDebugging.txt");
         System.out.println("Working directory: " + System.getProperty("user.dir"));

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class PrintNamesScores {
     public static void main(String[] args) throws FileNotFoundException{
-        Scanner file = new Scanner(new FileReader("resources/mixed1.txt"));
+        Scanner file = new Scanner(new FileReader("Java-Learning/resources/mixed1.txt"));
     while (file.hasNext()){
         String name = file.next(); // reads name
         file.next(); // reads scored

@@ -5,7 +5,7 @@ public class WriteDataToFile {
     public static void main(String[] args) 
             throws FileNotFoundException {
         
-        PrintWriter output = new PrintWriter("JavaBasics/resources/WriteDataToFile.txt");
+        PrintWriter output = new PrintWriter("Java-Learning/JavaBasics/resources/WriteDataToFile.txt");
         output.println("Hello");
         output.println("Practice");
 

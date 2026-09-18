@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FileReading {
     public static void main(String[] args) 
         throws FileNotFoundException{
-            FileReader file = new FileReader("JavaBasics/resources/pay.txt");
+            FileReader file = new FileReader("Java-Learning/JavaBasics/resources/pay.txt");
             Scanner read = new Scanner(file);
 
             String name = read.next();

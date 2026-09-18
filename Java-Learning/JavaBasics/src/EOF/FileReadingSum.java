@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class FileReadingSum {
     public static void main(String[] args) throws FileNotFoundException{
-        Scanner file = new Scanner(new FileReader("resources/sumNumbers.txt"));
+        Scanner file = new Scanner(new FileReader("Java-Learning/resources/sumNumbers.txt"));
         int sum = 0;
         while (file.hasNextInt()){
         int number = file.nextInt();
