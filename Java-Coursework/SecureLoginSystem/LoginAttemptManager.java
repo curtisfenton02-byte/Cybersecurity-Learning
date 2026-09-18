@@ -1,4 +1,4 @@
-package SecureLoginSystemCoursework;
+package SecureLoginSystem;
 
 public class LoginAttemptManager {
     private static final int MAX_ATTEMPTS=3;

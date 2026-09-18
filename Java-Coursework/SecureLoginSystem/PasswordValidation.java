@@ -1,4 +1,4 @@
-package SecureLoginSystemCoursework;
+package SecureLoginSystem;
 public class PasswordValidation {
     public boolean isValidPassword(String password){//checks if password is valid
         if (password==null|| password.length()<8){//can't be empty or less than 8 characters
@@ -24,7 +24,7 @@ for (int i=0; i<characters.length; i++){//loop through each character
     }
 }
 
-return containsUppercase && containsLowercase && containsDigit && containsSpecialCharacter;//valid passowrd meets the requirements
+return containsUppercase && containsLowercase && containsDigit && containsSpecialCharacter;//valid password meets the requirements
     }
     public String getMessage(){//if password isn't suitable
         return "Sorry, the password needs to be at least 8 characters long, contain one uppercase and lowercase letter, and contain a special character (eg: ?/)";

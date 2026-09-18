@@ -1,4 +1,4 @@
-package SecureLoginSystemCoursework;
+package SecureLoginSystem;
 public class UserAccount {
     private String username;//account details
     private String salt;

@@ -1,4 +1,4 @@
-package SecureLoginSystemCoursework;
+package SecureLoginSystem;
 import java.util.Scanner;
 
 public class MainApplication {

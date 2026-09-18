@@ -1,4 +1,4 @@
-package SecureLoginSystemCoursework;
+package SecureLoginSystem;
 
 import java.security.MessageDigest;//hashes passwords
 import java.security.SecureRandom;//secure salt

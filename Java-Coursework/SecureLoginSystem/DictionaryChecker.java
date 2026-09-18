@@ -1,4 +1,4 @@
-package SecureLoginSystemCoursework;
+package SecureLoginSystem;
 import java.io.File;//opens dictionary file
 import java.util.HashSet;
 import java.util.Scanner;
@@ -9,7 +9,7 @@ public class DictionaryChecker {
 
     public DictionaryChecker(){
         try{
-            Scanner scanner = new Scanner(new File("Java-Learning/JavaBasics/resources/commonPasswords.txt"));//reads commonPasswords.txt file
+            Scanner scanner = new Scanner(new File("Java-Coursework/resources/commonPasswords.txt"));//reads commonPasswords.txt file
             while (scanner.hasNextLine()){//redes each line
                 passwords.add(scanner.nextLine().trim().toLowerCase());//turns text to lowercase and removes spaces
             }

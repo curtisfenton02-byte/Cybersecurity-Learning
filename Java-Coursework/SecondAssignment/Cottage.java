@@ -1,4 +1,4 @@
-package ProgrammingCoursework;
+package SecondAssignment;
 public class Cottage { // Cottage class
 	// cottage information
 	private int number;
@@ -73,6 +73,6 @@ public class Cottage { // Cottage class
 	// displays this cottage information to user
 	public String toString() {
 		return number + "" + type + " |Max: " + maxOccupancy + "|£" + price + "|SeaView:" + seaView + "|Pets:"
-				+ petsAllowed + "|Reservedby:" + email;
+				+ petsAllowed + "|Reserved by:" + email;
 	}
 }

@@ -1,4 +1,5 @@
-package ProgrammingCoursework;
+package SecondAssignment;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -55,7 +56,7 @@ public class BookingSystem { // BookingSystem class
 
 // File Handling
 	private static void loadCottages() throws FileNotFoundException {
-		Scanner file = new Scanner(new FileReader("Java-Learning/JavaBasics/resources/cottages.txt"));
+		Scanner file = new Scanner(new FileReader("Java-Coursework/resources/cottages.txt"));
 		int index = 0;
 
 		while (file.hasNext() && index < cottages.length) {

@@ -1,4 +1,4 @@
-package ProgrammingCoursework;
+package FirstAssignment;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -8,19 +8,19 @@ public class CommissionProject  {
 
 public static void main(String[] args) throws FileNotFoundException {//allows 'FileReader' to throw a 'FileNotFoundException' if file isn't present
 		// TODO Auto-generated method stub
-	Scanner fileReader = new Scanner(new FileReader("Java-Learning/JavaBasics/resources/sales.txt"));// reads sales data from the 'sales.txt' file
+	Scanner fileReader = new Scanner(new FileReader("Java-Coursework/resources/sales.txt"));// reads sales data from the 'sales.txt' file
 	
 	Scanner input = new Scanner(System.in);//add scanner for user input
 	
-	double totalincomebeforecommission = 0;//using double variable because we want to allow the user to type with decimals as per the Appendix B/C
-	double totalcommission = 0;// start commission at 0
+	double totalIncomeBeforeCommission = 0;//using double variable because we want to allow the user to type with decimals as per the Appendix B/C
+	double totalCommission = 0;// start commission at 0
 	
 	//if no other value is entered, the default commission rate is 5.0% as per 'Appendix C'
 	final double default_commission_rate = 5.0;
 	double commissionRate = default_commission_rate;
 
 // Asks if the manager wants to enter a custom commission rate
-System.out.print("Do you want to pick a custom commission rate?Answer yes or no:");
+System.out.print("Do you want to pick a custom commission rate? Answer yes or no:");
 String result = input.nextLine();
 
 //ensures the program doesn't accept answers other than yes/no
@@ -61,7 +61,7 @@ String property = fileReader.nextLine();//retrieves the line from the FileReader
 if (property.equals("") && fileReader.hasNextLine()) {
 	property = fileReader.nextLine();
 }	
-int numberofsales= 0;//declaring variables within the loop
+int numberOfSales= 0;//declaring variables within the loop
 double price = 0;
 double income = 0;
 double commission = 0;
@@ -69,21 +69,21 @@ if (!fileReader.hasNextInt() || !fileReader.hasNextDouble()) {// ensures the num
 	break;
 }
 
-numberofsales = fileReader.nextInt();
+numberOfSales = fileReader.nextInt();
 price = fileReader.nextDouble();
 
 if (fileReader.hasNextLine());
 fileReader.nextLine(); // moving to the next line
 
-income = numberofsales * price;//calculates income
+income = numberOfSales * price;//calculates income
 commission = income * (commissionRate/100) ;//calculates commission
 
 //prints sales information into specified format with 'printf'
-System.out.printf("Property Type:%s, Sales: %d, Sold Price: £%.2f, Income: £%.2f, Commission: £%.2f%n",property, numberofsales,price,income,commission);
+System.out.printf("Property Type:%s, Sales: %d, Sold Price: £%.2f, Income: £%.2f, Commission: £%.2f%n",property, numberOfSales,price,income,commission);
 
 
-totalincomebeforecommission += income;//overwrites the totals instead of adding to them
-totalcommission += commission;
+totalIncomeBeforeCommission += income;//overwrites the totals instead of adding to them
+totalCommission += commission;
 
 }
 
@@ -91,8 +91,8 @@ fileReader.close();//closes file and scanner
 input.close();
 
 //prints totals into console
-System.out.printf("Total income:£%.2f\n", + totalincomebeforecommission);
-System.out.printf("Total commission:£%.2f", + totalcommission);
+System.out.printf("Total income:£%.2f\n", + totalIncomeBeforeCommission);
+System.out.printf("Total commission:£%.2f", + totalCommission);
 
 
 }

@@ -1,4 +1,4 @@
-package SecureLoginSystemCoursework;
+package SecureLoginSystem;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -6,7 +6,7 @@ import java.util.HashMap;//stores users account in memory
 import java.util.Scanner;
 
 public class FileManager {
-    private final String FILE_NAME= "accountData.txt";//accountData used for user info
+    private final String FILE_NAME= "Java-Coursework/resources/accountData.txt";//accountData used for user info
 public HashMap<String, UserAccount> loadUsers(){//loads saved users into HashMap
     HashMap<String, UserAccount> users= new HashMap<String, UserAccount>();//creates empty HashMap
     try{
