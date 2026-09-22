@@ -31,6 +31,7 @@ The root directory is the top-level directory in Linux and is represented by `/`
 
 # Why is the Root Directory Important in Cybersecurity?
 The root directory contains:
+
 - system configuration files
 - user accounts 
 - application files
@@ -44,15 +45,16 @@ These are all important information stored on a device making it a necessity for
 # Absolute vs Relative Paths
 An absolute path shows the complete location starting from `/`. For example:
 
-|Path|Explanation|
-|----|------|
-|/home/user/Documents/file.txt|This always points to the same location.|
 
-On the other hand, a relative path starts from your current location. For example, if you're currently inside:
+`/home/user/Documents/file.txt`
+
+This always points to the same location.
+
+On the other hand, a **relative path starts** from our current location. For example, if we're currently inside:
 
 `/home/user`
 
-You can access Documents using:
+We can access Documents using:
 
 `Documents/file.txt`
 
