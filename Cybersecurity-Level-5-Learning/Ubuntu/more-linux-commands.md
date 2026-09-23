@@ -254,4 +254,177 @@ mv lab-1/docs/notes.txt lab-1/docs/notes-backup.txt
 
 Now the notes.txt file should've been renamed to notes-backup.txt.
 
-``
+The structure of the `mv` command is essentially:
+
+**mv source destination**
+
+This same pattern can be used to move directories too. For example:
+
+```shell
+mv docs backup/
+```
+
+### Moving a file/directory to the user's home directory
+
+We can also move a file/directory from a specific directory, to our home directory by utilizing `~`.
+
+```shell
+mv lab-1/docs/notes-2.txt ~
+```
+
+Now `notes-2.txt` is within the home directory.
+
+## Deleting 
+
+For Linux, the main deletion command is `rm`, which stands for **remove**.
+
+### Deleting a File
+
+```shell
+rm notes.txt
+```
+
+### Deleting Multiple Files
+
+We can specify the names of files we intend on deleting.
+
+Assuming that we are within the directory which contains these three files:
+
+```shell
+rm notes.txt test.txt example.txt
+```
+
+All three of these files will be removed.
+
+### Deleting a Directory
+
+`rm` normally won't delete a directory on its own. Instead, we would need the `-r` option:
+
+```shell
+rm -r lab-1
+```
+
+By adding the additional `-r` flag, Linux tells `rm` to delete both the directory and its contents.
+
+### Empty Directory Alternative
+
+For an **empty** directory, we can use:
+
+```shell
+rmdir lab-1
+```
+
+However, `rmdir` will fail if the directory contains files or other directories.
+
+### Force Removal
+
+`rm -rf` combines two options for the `rm` command:
+
+1. `-r`: recursive
+2. `-f`: force
+
+Together, they recursively remove the folder and everything inside it, without asking for confirmation in situations where `rm` otherwise might.
+
+**By cautious with this command as it can remove large amounts of data very quickly.**
+
+## Basic Searching
+
+To locate an **executable** within the OS, and display its full path, we can use the `which` command.
+
+```shell
+which ls
+```
+
+When we run this command, Linux searches our configured command locations and tells use which executable would be run when we type `ls`.
+
+### What is an Executable?
+
+An executable is a file that the operating system can run as a program.
+
+For example, when we type `ls`, Shell then needs to find a program file called `ls` to run. Within our Ubuntu system, this program is likely located within:
+
+```shell
+/user/bin/ls
+```
+
+### Searching Multiple Executables
+
+We can provide various executables for Linux to find simultaneously. For example:
+
+```shell
+which perl python3 bash
+```
+
+Response:
+
+```shell
+/usr/bin/perl
+/usr/bin/python3
+/usr/bin/bash
+```
+
+### Whereis
+
+```shell
+whereis ls
+```
+
+The `whereis` command is similar to the previous `which` command but provides further scope of the executables, such as their:
+
+- Source files
+- Manual pages
+
+## Basic OS Info
+
+### hostname
+
+```shell
+hostname
+```
+
+This command identifies the name of our current system.
+
+### hostname -I
+
+```shell
+hostname -I
+```
+
+This command uses the `-I` flag to view the IP addresses assigned to the system.
+
+### lsb_release -a
+
+```shell
+lsb_release -a
+```
+
+This command allows us to view the current OS version information, including:
+
+- Distributor ID
+- Description
+- Release Date
+- Codename
+
+### hostnamectl
+
+```shell
+hostnamectl
+```
+
+This displays additional system information, including the **kernel version and CPU architecture**.
+
+## Getting Help
+
+To receive a brief, one-line description as to what a command does, we can attach the `whatis` command. For example:
+
+```shell
+whatis ls
+```
+
+Alternatively, if we want a more detailed description of the command, including usable flags and options, we can query the manual by attaching the `man` command.
+
+```shell
+man ls
+```
+
+To exit the manual view, press the **q** button.
