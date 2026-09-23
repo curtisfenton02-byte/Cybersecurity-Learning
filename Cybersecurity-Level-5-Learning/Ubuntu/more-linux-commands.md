@@ -60,6 +60,12 @@ To resolve this, we can enclose the name of the directory in quotation marks, en
 mkdir lab-1/docs/"New Directory"
 ```
 
+Alternatively, we can use `\` to escape each space. The result is the same as quotation marks, just a different format:
+
+```shell
+mkdir New\ Directory
+```
+
 ### Creating a File
 
 ```shell
