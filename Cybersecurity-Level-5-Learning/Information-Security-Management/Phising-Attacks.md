@@ -52,7 +52,7 @@ Phishing tools are software tools that can help attackers create, send, manage a
 | Type of tool | Purpose | Example |
 |---------|-------|----------|
 |Phishing campaign platforms|Creates and sends simulated phishing emails and tracks who accesses them.|Gophish|
-|Phishing page generators     |This tool creates fake login page/s that imitate legitimate websites.|Social-Engineer Toolkit (SET)|
-|Credential/session phishing frameworks|Attempts to intercept authentication information or sessions|Evilgnix|
-| Email spoofing | Helps make emails appear  | Example |
-| Type of tool | Purpose | Example |
+|Phishing page generators|This tool creates fake login page/s that imitate legitimate websites.|Social-Engineer Toolkit (SET)|
+|Credential/session phishing frameworks|Attempts to intercept authentication information or sessions.|Evilgnix|
+| Email spoofing | Helps make emails appear to come from another sender.| Various email infrastructure/tools. |
+| Phishing kits | Pre-built packages containing fake websites, emails and other components.| Criminally distributed phishing kits. |
