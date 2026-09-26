@@ -2,7 +2,7 @@
 
 ## What is a DBMS?
 
-DataBase Management Systems (DBMS) is a software that allows users to create, store, organize, retrieve, update, and manage data in a database.
+Database Management Systems (DBMS) is a software that allows users to create, store, organize, retrieve, update, and manage data in a database.
 
 Think of it as the middle layer between a user/application and the database itself.
 
@@ -356,3 +356,4 @@ Examples include:
 This is another major DBMS architecture type. The difference being that an embedded DBMS is a database that is integrated into and runs within the application rather than as a separate database server.
 
 It commonly works with databases stored locally on the same machine. These systems are often lighter-weight than client-server DBMSs, although this is not always the case.
+
