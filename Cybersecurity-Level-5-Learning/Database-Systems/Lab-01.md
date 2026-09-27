@@ -267,4 +267,4 @@ This is what's known as a *crow's foot*, and it means **many**. Therefore, by ha
 This is also an example of a **many-to-one relationship**.
 
 
-
+``
