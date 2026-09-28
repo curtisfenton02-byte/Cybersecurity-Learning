@@ -196,6 +196,26 @@ Again, only Student ID + Course Code is also a candidate key because it is minim
 
 So, candidate key = minimal superkey.
 
+## What is a Non-Trivial Dependency?
+
+A **non-trivial dependency** is simply a functional dependency where the attributes on the right-hand side aren't already contained in the left-hand side.
+
+For example:
+
+### Starting with a normal dependency
+
+Suppose: `A = B`
+
+This is a non-trivial dependency because `B` is not already part of `A`.
+
+## What is a Trivial Dependency?
+
+Suppose we have: `A, B = A`
+
+Here we're saying that knowing `A` and `B` determines `A`. However, that statement is already automatically true because we already know `A`.
+
+Essentially, because `A` is on the left, it is classed as a trivial dependency. 
+
 ## Abbreviated Terms
 
 | Term | Meaning |
