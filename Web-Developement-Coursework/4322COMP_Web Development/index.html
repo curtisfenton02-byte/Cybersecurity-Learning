@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Study Planner</h1>
+        <p>A webpage which tracks deadlines, revision tasks, grades and focus sessions</p>
+    </header>
+  
+    <main>
+            <h2>Add Your Revision Tasks Here</h2>
+            <form name="add-item-form">
+                <div>
+                    <label for="description">Task Description</label>
+                    <input id="description" name="description" type="text" required maxlength="100">
+                </div>
+
+    <div>
+        <label for="due-date">Task Due Date</label>
+        <input id="due-date" name="due-date" type="date" required>
+ </div>
+
+ <div>
+    <label for="webLink">URL Link (optional)</label>
+    <input id="webLink" type="url">
+ </div>
+
+<div>
+    <label for="completionDate">Completion Date (optional)</label>
+    <input id="completionDate" type="date">
+</div>
+
+    <div>
+       <button type="submit">Click Here to Add Revision Task</button>
+ </div>
+ </form>
+            
+ <ul id="errorMsg" class="hidden"></ul>
+    
+ <h2>A List of Your Tasks</h2>
+ <div id="items"></div>
+        
+ <h2>Overdue Tasks</h2>
+ <div id="overdueAlerts"></div>
+            
+ <h2>Tasks Due Soon</h2>
+ <div id="upcomingAlerts"></div>
+
+<h2>Calendar</h2>
+
+<div id="calendarControls">
+    <button id="prevMonth" type="button">Previous</button>
+    <span id="calendarTitle"></span>
+    <button id="nextMonth" type="button">Next</button>
+</div>
+       
+<div class="weekdays">
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+</div> 
+       
+<div id="calendarGrid"></div>
+
+<div id="selectedPanel" class="hidden">
+    <h3 id="PanelTitle">Items for selected day</h3>
+    <div id="PanelList"></div>
+    <button id="closePanel" type="button">Close</button>
+    <p id="calendarKey">R = Revision Task, D = Deadline</p>
+</div>
+
+<h2>Student Grade Tracker</h2>
+
+<div>
+    <label for="targetGrade">Target Grade: </label>
+    <select id="targetGrade">
+        <option value="40">Third</option>
+        <option value="50">2:2</option>
+        <option value="60">2:1</option>
+        <option value="70">First</option>
+    </select>
+</div>
+
+<div>
+<label for="assessmentSelect">Assessment:</label>
+<select id="assessmentSelect"></select>
+</div>
+
+<div>
+    <label for="assessmentMark">Mark: </label>
+    <input id="assessmentMark" type="number" min="0" max="100">
+</div>
+
+<div>
+    <button id="addMarkButton" type="button">Add Mark</button>
+</div>
+
+<div id="results"></div>
+<div id="targetFeedback"></div>
+
+<h2>Student Study Timer</h2>
+
+<div>
+    <label for="studyTime">Study Time (15-40 minutes)</label>
+    <input id="studyTime" type="number" min="15" max="40" value="25">
+</div>
+
+<div>
+    <button id="startTimer" type="button">Start Timer</button>
+    <button id="pauseTimer" type="button">Pause</button>
+    <button id="resetTimer" type="button">Reset</button>
+</div>
+
+<audio id="alertsound">
+    <source src="sounds/alert.mp3" type="audio/mpeg">
+</audio>
+
+<div id="showTimer">25:00</div>
+<p id="timerMessage"></p>
+
+</main>
+<script src="scripts/scripts.js"></script>
+    
+</body>
+</html
